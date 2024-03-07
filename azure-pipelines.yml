@@ -7,7 +7,9 @@ trigger:
 - main
 
 pool:
-  vmImage: 'windows-latest'
+  name: learningsession_agent
+  demands:
+   - agent.name -equals DEV-LPT0049
 
 variables:
   solution: '**/*.sln'
